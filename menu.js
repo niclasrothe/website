@@ -24,7 +24,7 @@
 
 // Beim lokalen Testen (file://) gibt es keinen Server, der Ordner automatisch auf index.html auflöst.
 if (location.protocol === 'file:') {
-  document.querySelectorAll('.menu-list a, .menu-button').forEach(function (a) {
+  document.querySelectorAll('.menu-list a, .menu-button, .site-footer a').forEach(function (a) {
     var h = a.getAttribute('href');
     if (h && h.slice(-1) === '/') a.href = a.href + 'index.html';
   });
