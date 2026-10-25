@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projekte – Niclas Rothe</title>
+  <link rel="canonical" href="https://niclasrothe.de/projekte/">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <nav class="menu" aria-label="Hauptmenü">
+    <button class="menu-button" id="menu-button" type="button"
+            aria-expanded="false" aria-controls="menu-list" aria-label="Menü öffnen">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="menu-list" id="menu-list" hidden>
+      <li><a href="../">Start</a></li>
+      <li><a href="./" aria-current="page">Projekte</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+
+    <!-- ===================== PROJEKTBEITRAG =====================
+        <h1>Überschrift</h1>
+        <h2>Unter-Überschift</h2>
+        <p>Text</p>
+        Bilder: Beschreibung im alt="…" anpassen (f. Screenreader/Suchmaschinen).
+        Schriftgröße des Fließtexts: --text-size in styles.css (.page).
+    ========================================================= -->
+
+    <article>
+
+      <h1>Messlehre zur Überprüfung der Höhe des Fugenvergusses an Leipziger Straßenbahnschienen mit Profil 60R2</h1>
+
+      <h2>Ausgangssituation</h2>
+      
+      <p>
+        Nach den Schäden durch das Überlaufen geschmolzener Fugenmasse in heißen Sommerwochen 2026,
+        entstand der Wunsch einer zusätzlichen Prüfmethode für die Höhe des Schienenlängsvergusses.
+        Diese zusätzliche Überprüfung bezieht sich auf die Kontrolle im Rahmen der Bauüberwachung 
+        und auf LVB-Vorgaben für neugebaute Gleisabschnitte mit dem oben genannten Schienenprofil:<br> 
+        Vergusshöhe: 5 mm unter Fahrkopfoberkante, 3 mm unter Leitkopfoberkante<br>
+        Streifenbreite: 55-60 mm neben Fahrkopf, 30-35 mm neben Leitkopf
+      </p>
+
+      <h2>Erstentwurf</h2>
+
+      <p>
+        Auf Basis einer vorliegenden DWG für das Schienenprofil sind per CAD-Konstruktion und STL-Export, 
+        mit den selben Einstellungen für den jeweiligen 3D-Druck (PLA, 2 Schichten Außenwand, 10% Infill Muster "kubisch adaptiv")
+        ein 50 mm langes Schienenstück und 2 einfache 25 mm tiefe Prototypen entstanden. <br>
+        Diese sitzen auf der gedruckten Schiene in Waage, jedoch nicht auf einem Stück Stahlschiene, wie das folgende Bild zeigt:
+      </p>
+
+      <!-- BILD 001 -->
+      <figure>
+        <img src="../assets/img/projekte/001.jpg" width="1299" height="935" loading="lazy"
+             alt="Prototyp der Messlehre auf fabrikneuer Stahlschiene 60R2">
+      </figure>
+
+      <p>
+        Das Prüfen des ersten gedruckten Profils gegen das Profil der Stahlschiene zeigt nicht unerhebliche Abweichungen:
+      </p>
+
+      <!-- BILDER 002_links und 002_rechts nebeneinander -->
+      <div class="img-pair">
+        <figure style="--ar: 2.02">
+          <img src="../assets/img/projekte/002_links.jpg" width="1440" height="713" loading="lazy"
+               alt="Abweichung erstes gedrucktes und Stahlprofil, Rillenkopf links">
+        </figure>
+        <figure style="--ar: 1.9">
+          <img src="../assets/img/projekte/002_rechts.jpg" width="1440" height="757" loading="lazy"
+               alt="Abweichung erstes gedrucktes und Stahlprofil, Rillenkopf rechts">
+        </figure>
+      </div>
+
+      <h2>Nachkonstruktion</h2>
+
+      <p>
+        Mittels der (auf der Produktseite öffentlich zugänglichen) bemaßten Zeichnung des Herstellers voestalpine, 
+        und letztlich auch mithilfe der bemaßten Zeichnung aus der DIN EN 14811 (2010 und 2019),
+        wurde das Profil in AutoCAD iterativ nachkonstruiert:
+      </p>
+
+      <!-- BILD 003 -->
+      <figure>
+        <img src="../assets/img/projekte/003.jpg" width="1092" height="362" loading="lazy"
+             alt="CAD-Profilkonturen">
+      </figure>
+
+      <p>
+        Nachdem im letzten Schritt vor allem die Ausrundungen korrigiert wurden,
+        zeigt eine Überlagerung der Profilkonturen die Abweichungen recht deutlich:
+      </p>
+
+      <!-- BILD 005 und darunter BILDER 004_links / 004_rechts -->
+      <div class="img-stack">
+        <figure>
+          <img src="../assets/img/projekte/005.jpg" width="1440" height="572" loading="lazy"
+               alt="Ueberlagerung CAD-Profilkonturen">
+        </figure>
+
+        <div class="img-pair">
+          <figure style="--ar: 0.947">
+            <img src="../assets/img/projekte/004_links.jpg" width="1440" height="1520" loading="lazy"
+                 alt="gedruckte Schienenprofile">
+          </figure>
+          <figure style="--ar: 1.511">
+            <img src="../assets/img/projekte/004_rechts.jpg" width="1440" height="953" loading="lazy"
+                 alt="letzter Schienenprofil-Testdruck an Stahlschiene">
+          </figure>
+        </div>
+      </div>
+
+      <h2>Ausgleich von Fertigungstoleranzen</h2>
+
+      <p>
+        Nach dem Erreichen einer Übereinstimmung des Profils mit der bemaßten Zeichnung,
+        fällt eine weitere Abweichung auf:
+      </p>
+
+      <!-- BILD 006 -->
+      <figure>
+        <img src="../assets/img/projekte/006.jpg" width="1440" height="1135" loading="lazy"
+             alt="Prototyp Messlehre mit korrektem Profil auf Stahlschiene">
+      </figure>
+
+      <p>
+        Dass die Profilkontur mittlerweile korrekt konstruiert war, konnte durch einen Abgleich mit einer 
+        vom Hersteller zur Verfügung gestellten Original-DXF verifiziert werden.
+        Trotzdem liegt die rein gemäß der Profilkontur erstellte Messlehre in waagerechter Position 
+        nur auf dem Fahrkopf, nicht jedoch auf dem Rillenkopf auf.<br>
+        Für den Ausgleich der (produktlebenszeit-freundlichen) Materialmehrung auf dem besonders von 
+        Verschleiß betroffenem Fahrkopf, wurde an der Messlehre ein 0.65 mm hoher Steg 
+        zur Auflage auf dem Leitkopf ergänzt.<br>
+        Der Messsteg für den Abstand zur Fugenmasse auf Leitkopfseite wurde entsprechend verlängert.
+      </p>
+
+      <!-- BILD 007 -->
+      <figure>
+        <img src="../assets/img/projekte/007.jpg" width="1440" height="1441" loading="lazy"
+             alt="Messlehre mit Rillenkopf-Steg">
+      </figure>
+
+      <h2>Spezifika der aktuellsten Version</h2>
+
+      <p>
+        An der entstandenen Messlehre sind die Messstege etwa mittig in den Vergussfugen (je nach Streifenbreite) angeordnet. 
+        Die Maße werden nach Länge/Breite, Höhe und Tiefe angegeben. 
+        Der Messsteg auf der Fahrkopfseite ist 20 mm breit und jener auf der Leitkopfseite ist 10 mm breit. 
+        Die Messstege sind in der Mitte 0,1 mm höher als die Abstandsvorgabe zur Fugenmasse, 
+        um deren leicht konkave Ausformung nach der Aushärtung auszugleichen. 
+        Mit der Gesamtbreite der Messlehre kann mittels Blick von oben zusätzlich überprüft werden, 
+        ob die vorgesehene Breite der Längsverguss-Streifen 
+        (i. d. R. max. 60 mm von Fahrkopfaußenkante und 35 mm von Leitkopfaußenkante) eingehalten wird. 
+        Die bisher verwendete weiße Farbe des Materials, hilft mittels der Ablagerung von Schienenrost,
+        dabei Druckstellen und Abreibungen selbst bei vorsichtiger Verwendung zu erkennen.
+        Die Tiefe beträgt, wie schon bei den ersten Prototypen, 25 mm. 
+        Für eine höhere Stabilität bei der Verwendung im Außeneinsatz wurden 3 Schichten Außenwand 
+        und 25 % Infill ("kubisch-adaptiv") gewählt. 
+        Die Toleranz des verwendeten Drucker-Setups (Modell, Druckkopf, Düse) kann
+        (je nach Achse und Einstellungen) zwischen 0,05 und 0,3 mm betragen. 
+        Das nachfolgende Bild zeigt die aktuellste Version der Messlehre während des Drucks: 
+      </p>
+
+      <!-- BILD 008 -->
+      <figure>
+        <img src="../assets/img/projekte/008.jpg" width="1440" height="1080" loading="lazy"
+             alt="Aktuellste Version der Messlehre im Druck">
+      </figure>
+
+      <p>
+        Für eine zukünftige Version werden Wünsche aus dem Einsatz gesammelt und es ist vorgesehen die Höhe
+        des Steges zur Auflage auf dem Leitkopf von 0,65 auf 0,7 mm zu erhöhen.
+      </p>
+
+    </article>
+  </main>
+
+  <script src="../menu.js"></script>
+</body>
+</html>

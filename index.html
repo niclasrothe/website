@@ -1,40 +1,39 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <title>Website im Aufbau</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background-color: #f4f4f4;
-            font-family: Arial, Helvetica, sans-serif;
-            color: #333;
-        }
-        .box {
-            text-align: center;
-            padding: 40px;
-            background: #ffffff;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            margin: 0 0 10px 0;
-        }
-        p {
-            margin: 0;
-            font-size: 1.1em;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Niclas Rothe</title>
+  <meta name="description" content="Persönliche Website von Niclas Rothe.">
+  <meta property="og:title" content="Niclas Rothe">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://niclasrothe.de/">
+  <meta property="og:image" content="https://niclasrothe.de/assets/img/portrait.jpg">
+  <link rel="canonical" href="https://niclasrothe.de/">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="box">
-        <h1>🚧 Website im Aufbau 🚧</h1>
-        <p>Diese Website wird gerade gebaut.</p>
+  <main class="hero">
+    <img class="portrait" src="assets/img/portrait.jpg" width="176" height="176"
+         alt="Porträt von Niclas Rothe">
+    <h1>Niclas Rothe</h1>
+
+    <div class="social">
+      <nav class="menu" aria-label="Hauptmenü">
+        <a class="menu-button" href="projekte/" aria-label="Projekte">
+          <span></span><span></span><span></span>
+        </a>
+      </nav>
+      <a href="https://www.linkedin.com/in/niclas-rothe-32753439b/"
+         target="_blank" rel="noopener noreferrer" aria-label="Niclas Rothe auf LinkedIn">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect width="24" height="24" rx="2.4" fill="#0A66C2"/>
+          <path fill="#fff" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/>
+        </svg>
+      </a>
     </div>
+  </main>
+
+  <script src="menu.js"></script>
 </body>
 </html>
