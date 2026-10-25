@@ -163,6 +163,13 @@ h1 {
   overflow-wrap: break-word;
 }
 
+.page h2 {
+  margin: 0 0 16px;
+  font-size: clamp(20px, 4vw, 24px);
+  hyphens: auto;
+  overflow-wrap: break-word;
+}
+
 .page p {
   max-width: 65ch;
   margin: 0 0 28px;
