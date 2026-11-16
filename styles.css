@@ -286,3 +286,17 @@ Auskommentiert damit Listen die selbe Breite hat wie Überschrift und Bilder
 @media (prefers-reduced-motion: reduce) {
   * { transition: none !important; }
 }
+
+/* ---------- Startseite auf Handys: kompakter, damit nicht gescrollt werden muss ---------- */
+@media (max-width: 600px) {
+  .hero {
+    --gap: clamp(28px, 5vh, 44px);     /* Abstand Titelbild–Profilbild = Profilbild–Name */
+    justify-content: flex-start;       /* Inhalt oben, damit der obere Abstand exakt --gap ist */
+    padding: 0 24px 16px;
+  }
+  .portrait { width: 148px; height: 148px; margin: var(--gap) 0; }
+  .hero h1 { font-size: 30px; }   /* 36px × 148/176 */
+  .subtitle { font-size: 1rem; }  /* statt 1.15rem */
+  .social { margin-top: 20px; }
+  .site-footer { padding-top: 8px; }
+}
