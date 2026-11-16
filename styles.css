@@ -105,10 +105,9 @@ a { color: inherit; }
 
 .banner img {
   display: block;
-  width: auto;
-  height: auto;
-  max-width: min(100%, 800px);    /* maximale Bildbreite auf großen Monitoren */
-  max-height: 38vh;               /* auf niedrigen Fenstern nicht höher als 38 % der Fensterhöhe */
+  width: 100%;                    /* füllt die verfügbare Breite, schrumpft auf dem Handy mit */
+  max-width: 800px;               /* maximale Bildbreite auf großen Monitoren */
+  height: auto;                   /* Höhe folgt automatisch dem Seitenverhältnis */
   margin: 0 auto;
 }
 
