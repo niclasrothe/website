@@ -71,7 +71,7 @@ a { color: inherit; }
   position: absolute;
   top: 54px;
   left: 0;
-  min-width: 180px;
+  min-width: 150px;
   margin: 0;
   padding: 8px;
   list-style: none;
@@ -98,13 +98,27 @@ a { color: inherit; }
 }
 
 /* ---------- Startseite ---------- */
+.banner {
+  background: #d7dbdf;          /* Hintergrundfarbe des Titelbilds, damit der Streifen über die volle Breite reicht */
+  line-height: 0;
+}
+
+.banner img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: min(100%, 800px);    /* maximale Bildbreite auf großen Monitoren */
+  max-height: 38vh;               /* auf niedrigen Fenstern nicht höher als 38 % der Fensterhöhe */
+  margin: 0 auto;
+}
+
 .hero {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 80px 24px;
+  padding: 48px 24px;
   text-align: center;
 }
 
@@ -113,7 +127,7 @@ a { color: inherit; }
   height: 176px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: 50% 12%;
+  object-position: 50% 8%;
   margin-bottom: 28px;
 }
 
@@ -122,6 +136,13 @@ h1 {
   font-size: 36px;
   font-weight: 700;
   line-height: 1.2;
+}
+
+.subtitle {
+  margin: 12px 0 0;
+  color: var(--muted);
+  font-size: 1.15rem;
+  text-wrap: balance;
 }
 
 .social {
@@ -155,7 +176,7 @@ h1 {
 .page {
   width: 100%;
   flex: 1;
-  --text-size: 12pt;            /* Fließtext: 12pt (≈ 16 px) */
+  --text-size: 12pt;              /* Fließtext: 12pt (≈ 16 px) */
   max-width: 760px;
   margin: 0 auto;
   padding: 110px 24px 96px;
@@ -182,7 +203,7 @@ h1 {
   hyphens: auto;
 }
 
-/* Auskommentiert damit Text die selbe Breite hat wie Überschrift und Bilder
+/* Auskommentiert damit Text die selbe Breite hat wie Überschrift und Bilder auf Projekt-Unterseite
 .page p {
   max-width: 65ch;
   margin: 0 0 28px;
@@ -245,7 +266,7 @@ h1 {
 .site-footer a:hover { color: var(--accent); text-decoration: underline; }
 
 /* Listen und Links im Fließtext (Datenschutzseite)
-Auskommentiert damit Listendie selbe Breite hat wie Überschrift und Bilder
+Auskommentiert damit Listen die selbe Breite hat wie Überschrift und Bilder
 .page ul {
   max-width: 65ch;
   margin: 0 0 28px;
