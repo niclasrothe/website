@@ -71,6 +71,8 @@ a { color: inherit; }
   position: absolute;
   top: 54px;
   left: 0;
+  width: max-content;             /* Breite passt sich dem längsten Eintrag an, kein Umbruch */
+  max-width: calc(100vw - 32px);
   min-width: 150px;
   margin: 0;
   padding: 8px;
@@ -89,6 +91,7 @@ a { color: inherit; }
   border-radius: 8px;
   text-decoration: none;
   font-size: 1.05rem;
+  white-space: nowrap;
 }
 
 .menu-list a:hover,
