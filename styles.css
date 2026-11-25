@@ -63,6 +63,28 @@ a { color: inherit; }
 
 .menu-button:hover span { background: var(--accent); }
 
+/* Unterseiten: fest stehendes Menüsymbol mit schmaler Hintergrundfläche, damit es beim Scrollen
+   nicht über Text und Bildern liegt. Der Schatten kommt erst, wenn Inhalt unter den unteren Strich
+   scrollt (Klasse .is-over-content, gesetzt in menu.js). */
+body > .menu .menu-button {
+  position: relative;
+  isolation: isolate;
+}
+
+body > .menu .menu-button::before {
+  content: "";
+  position: absolute;
+  inset: 7px 5px;                 /* ca. 4 px Rand um die Striche */
+  z-index: -1;
+  border-radius: 8px;
+  background: var(--bg);
+  transition: box-shadow .2s ease;
+}
+
+body > .menu .menu-button.is-over-content::before {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, .35);
+}
+
 .menu-button[aria-expanded="true"] span:nth-child(1) { transform: translateY(11px) rotate(45deg); }
 .menu-button[aria-expanded="true"] span:nth-child(2) { opacity: 0; }
 .menu-button[aria-expanded="true"] span:nth-child(3) { transform: translateY(-11px) rotate(-45deg); }
@@ -172,6 +194,64 @@ h1 {
   position: relative;
   top: auto;
   left: auto;
+}
+
+/* ---------- Hinweis-Pfeile unter Menü und LinkedIn ---------- */
+/* Handschrift Kalam, lokal hinterlegt (SIL Open Font License, siehe assets/fonts/Kalam-OFL.txt) */
+@font-face {
+  font-family: "Kalam";
+  src: url("assets/fonts/kalam-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.social { position: relative; margin-bottom: 72px; }
+
+.hint {
+  position: absolute;
+  top: calc(100% + 2px);
+  pointer-events: none;
+  color: var(--muted);
+  font-family: "Kalam", "Chalkboard SE", "Segoe Print", cursive;
+  font-size: 22px;
+  line-height: 1;
+  white-space: nowrap;
+  text-align: left;
+}
+
+.hint svg {
+  position: absolute;
+  top: 0;
+  width: 56px;
+  height: 45px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hint-text { display: block; padding-top: 38px; }
+
+/* links: Pfeilspitze zeigt auf das Menü, Text läuft nach links weg */
+.hint-left { right: calc(100% - 24px); }
+.hint-left svg { right: -10.3px; }   /* Pfeilspitze genau auf der Mittelachse des Menüsymbols */
+.hint-left .hint-text { padding-right: 44px; transform: rotate(-4deg); }
+
+/* rechts: gespiegelt, Pfeilspitze auf LinkedIn */
+.hint-right { left: calc(100% - 24px); }
+.hint-right svg { left: -10.3px; transform: scaleX(-1); }   /* Pfeilspitze auf der Mittelachse des LinkedIn-Symbols */
+.hint-right .hint-text { padding-left: 50px; transform: rotate(3deg); }
+
+/* Handy: Text etwas kleiner und unter den Pfeilanfang, damit er nicht an den Rand stößt */
+@media (max-width: 600px) {
+  .hint { font-size: 19px; }
+  .hint-text { padding-top: 51px; }
+  .hint-left .hint-text { padding-right: 20px; }
+  .hint-right .hint-text { padding-left: 26px; }
+  /* rechts ist mobil wenig Platz: mehrteilige Labels (z. B. „professional profile“) zweizeilig */
+  .hint-right .hint-text { white-space: normal; width: min-content; line-height: 1.15; }
 }
 
 /* ---------- Unterseiten / Projektbeitrag ---------- */

@@ -10,12 +10,17 @@
   <meta property="og:url" content="https://niclasrothe.de/">
   <meta property="og:image" content="https://niclasrothe.de/assets/img/portrait.jpg">
   <link rel="canonical" href="https://niclasrothe.de/">
+  <link rel="alternate" hreflang="de" href="https://niclasrothe.de/">
+  <link rel="alternate" hreflang="en" href="https://niclasrothe.de/en/">
   <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 </head>
 <body>
   <header class="banner">
     <img src="assets/img/titelbild.png" width="2000" height="532"
-         alt="Banner Prozess- und Verkehsleittechnik">
+         alt="Banner Prozess- und Verkehrsleittechnik">
   </header>
 
   <main class="hero">
@@ -26,7 +31,7 @@
 
     <div class="social">
       <nav class="menu" aria-label="Hauptmenü">
-        <a class="menu-button" href="projekte/" aria-label="Projekte">
+        <a class="menu-button" href="projekte/" aria-label="Hobbyprojekte">
           <span></span><span></span><span></span>
         </a>
       </nav>
@@ -37,11 +42,22 @@
           <path fill="#fff" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45z"/>
         </svg>
       </a>
+
+      <!-- Hinweis-Pfeile -->
+      <span class="hint hint-left" aria-hidden="true">
+        <svg viewBox="0 0 60 48"><path d="M13 45 C 32 45, 46 32, 49 6 M42 14 L49 5 L55 14"/></svg>
+        <span class="hint-text">Hobbyprojekte</span>
+      </span>
+      <span class="hint hint-right" aria-hidden="true">
+        <svg viewBox="0 0 60 48"><path d="M4 44 C 28 46, 46 32, 49 6 M42 14 L49 5 L55 14"/></svg>
+        <span class="hint-text">Berufliches</span>
+      </span>
     </div>
   </main>
 
   <footer class="site-footer">
     <a href="datenschutz/">Datenschutz</a>
+    <a href="en/" hreflang="en" lang="en">English</a>
   </footer>
 
   <script src="menu.js"></script>

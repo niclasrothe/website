@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Side projects – Niclas Rothe</title>
+  <link rel="canonical" href="https://niclasrothe.de/en/projects/">
+  <link rel="alternate" hreflang="de" href="https://niclasrothe.de/projekte/">
+  <link rel="alternate" hreflang="en" href="https://niclasrothe.de/en/projects/">
+  <link rel="stylesheet" href="../../styles.css">
+  <link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="../../assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="../../assets/img/apple-touch-icon.png">
+</head>
+<body>
+  <nav class="menu" aria-label="Main menu">
+    <button class="menu-button" id="menu-button" type="button"
+            aria-expanded="false" aria-controls="menu-list" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="menu-list" id="menu-list" hidden>
+      <li><a href="../">Home</a></li>
+      <li><a href="./" aria-current="page">Side projects</a></li>
+    </ul>
+  </nav>
+
+  <main class="page">
+
+    <article>
+
+      <h1>Measuring gauge for checking the height of the joint sealant on grooved tram rails in Leipzig (profile&nbsp;60R2)</h1>
+
+      <h2>Background</h2>
+      
+      <p>
+        After molten joint sealant overflowed in the hot weeks of summer 2026 and caused damage, an additional method was needed for checking the height of the longitudinal sealant along the rails. This additional check applies to inspections during construction supervision and to the requirements of Leipzig's transit operator LVB for newly built track sections with the above-mentioned rail profile&nbsp;60R2 (former designation Ri&nbsp;60&nbsp;N).<br>
+        Sealant height: 5&nbsp;mm below the highest point of the running surface, 3&nbsp;mm below the top of the guard<br>
+        Strip width: 55&#8288;–&#8288;60&nbsp;mm on the running-surface side, 30&#8288;–&#8288;35&nbsp;mm on the guard side
+      </p>
+
+      <h2>First draft</h2>
+
+      <p>
+        Starting from an existing DWG of the rail profile contour, I exported an STL and first printed a 50&nbsp;mm long test piece of rail. The first simple prototypes followed, each 25&nbsp;mm deep. <br>
+        For a quick draft, the same settings were used for all pieces (2&nbsp;perimeters, 10&nbsp;% infill with the “Adaptive Cubic” pattern, PLA). The gauge prototypes sit level on the printed rail but not on a piece of steel rail, as the following picture shows:
+      </p>
+
+      <figure>
+        <img src="../../assets/img/projekte/001.jpg" width="1299" height="935" loading="lazy"
+             alt="Prototype of the gauge on a brand-new 60R2 steel rail">
+      </figure>
+
+      <p>
+        Checking the first printed profile against the profile of the steel rail reveals considerable deviations:
+      </p>
+
+      <div class="img-pair">
+        <figure style="--ar: 2.02">
+          <img src="../../assets/img/projekte/002_links.jpg" width="1440" height="713" loading="lazy"
+               alt="Deviation between first printed profile and steel profile, guard on the left">
+        </figure>
+        <figure style="--ar: 1.9">
+          <img src="../../assets/img/projekte/002_rechts.jpg" width="1440" height="757" loading="lazy"
+               alt="Deviation between first printed profile and steel profile, guard on the right">
+        </figure>
+      </div>
+
+      <h2>Reconstruction</h2>
+
+      <p>
+        Using the dimensioned drawing from the manufacturer voestalpine (publicly available on the product page), and ultimately also the dimensioned drawing from DIN&nbsp;EN&nbsp;14811 (2019), the profile was reconstructed iteratively in AutoCAD:
+      </p>
+
+      <figure>
+        <img src="../../assets/img/projekte/003.jpg" width="1092" height="362" loading="lazy"
+             alt="CAD profile contours">
+      </figure>
+
+      <p>
+        After the fillets in particular had been corrected in the last step, an overlay of the profile contours shows the deviations quite clearly:
+      </p>
+
+      <div class="img-stack">
+        <figure>
+          <img src="../../assets/img/projekte/005.jpg" width="1440" height="572" loading="lazy"
+               alt="Overlay of CAD profile contours">
+        </figure>
+
+        <div class="img-pair">
+          <figure style="--ar: 0.947">
+            <img src="../../assets/img/projekte/004_links.jpg" width="1440" height="1520" loading="lazy"
+                 alt="Printed rail profiles">
+          </figure>
+          <figure style="--ar: 1.511">
+            <img src="../../assets/img/projekte/004_rechts.jpg" width="1440" height="953" loading="lazy"
+                 alt="Latest rail profile test print on steel rail">
+          </figure>
+        </div>
+      </div>
+
+      <h2>Compensating for manufacturing tolerances</h2>
+
+      <p>
+        Once the profile matched the dimensioned drawing, a further deviation became apparent:
+      </p>
+
+      <figure>
+        <img src="../../assets/img/projekte/006.jpg" width="1440" height="1135" loading="lazy"
+             alt="Gauge prototype with correct profile on steel rail">
+      </figure>
+
+      <p>
+        That the profile contour was now correct could be verified by comparing it with an original DXF file provided by the manufacturer. Nevertheless, when held horizontally, the gauge made to the profile contour rests only on the running surface and not on the guard (see previous picture).<br>
+        The running-surface side of the head, which is particularly subject to wear, has extra material that benefits the rail's service life. To compensate for this, a 0.65&nbsp;mm high bar was added to the gauge to rest on the guard.<br>
+        The measuring bar for the distance to the sealant on the guard side was lengthened accordingly.
+      </p>
+
+      <figure>
+        <img src="../../assets/img/projekte/007.jpg" width="1440" height="1441" loading="lazy"
+             alt="Gauge with bar resting on the guard">
+      </figure>
+
+      <h2>Specifics of the latest version</h2>
+
+      <p>
+        On the resulting gauge, the measuring bars are positioned roughly in the middle of the sealant strips (depending on strip width). Dimensions are given as length/width, height and depth. The measuring bar on the running-surface side is 20&nbsp;mm wide and the one on the guard side is 10&nbsp;mm wide. In the middle, each measuring bar is 0.1&nbsp;mm higher than the specified distance to the sealant, to compensate for the slightly concave shape of the sealant after curing. The overall width of the gauge also makes it possible to check from above whether the intended width of the longitudinal sealant strips (generally max.&nbsp;60&nbsp;mm from the outer edge of the rail head on the running-surface side and 35&nbsp;mm from the outer edge of the guard) has been kept. So far, the gauges have been printed in white, which makes rust rubbed off the rail visible on them and reveals areas under particular load or abrasion, even with careful use. As with the first prototypes, the depth is 25&nbsp;mm. For greater stability in outdoor use, 3&nbsp;perimeters and 25&nbsp;% infill (Adaptive Cubic) were chosen. The tolerance of the printer setup used (model, print head, nozzle) is between 0.05 and 0.3&nbsp;mm, depending on the axis. The following picture shows the latest version of the gauge during printing:
+      </p>
+
+      <figure>
+        <img src="../../assets/img/projekte/008.jpg" width="1440" height="1080" loading="lazy"
+             alt="Latest version of the gauge during printing">
+      </figure>
+
+      <p>
+        For a future version, feedback from field use is being collected, and the plan is to increase the height of the bar that rests on the guard from 0.65 to 0.7&nbsp;mm.
+      </p>
+
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <a href="../privacy/">Privacy</a>
+    <a href="../../projekte/" hreflang="de" lang="de">Deutsch</a>
+  </footer>
+
+  <script src="../../menu.js"></script>
+</body>
+</html>
